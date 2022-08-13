@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 21, 2021 at 08:03 AM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.7
+-- Generation Time: Aug 13, 2022 at 07:38 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `food_v4`
+-- Database: `abc`
 --
 
 -- --------------------------------------------------------
@@ -54,7 +54,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id`, `about_content`, `image`, `logo`, `footer_logo`, `favicon`, `fb`, `twitter`, `insta`, `android`, `ios`, `copyright`, `title`, `short_title`, `mobile`, `email`, `address`, `created_at`, `updated_at`) VALUES
-(1, 'About  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'about-5fa8f1af82a9a.jpg', 'logo-6030f93f7573e.png', 'footer-6030f93f752a7.png', 'favicon-6030f9f848460.png', 'https://www.facebook.com/', 'https://twitter.com/', 'https://www.instagram.com/', 'https://play.google.com/store/apps', 'https://www.apple.com/in/itunes/', 'Copyright Restaurant Website © 2020.All Rights Reserved.', 'Single restaurant food ordering Website and Delivery Boy App with Admin Panel', 'Restaurant Website', '+91 7016428845', 'infotechgravity@gmail.com', '518-519, Amby Valley Arcade, VIP Cir, nr. Essar Petroleum, Uttran, Surat, Gujarat 394105', '2021-02-20 12:00:56', '2021-02-20 19:00:56');
+(1, 'About  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'about-5fa8f1af82a9a.jpg', 'logo-6030f93f7573e.png', 'footer-6030f93f752a7.png', 'favicon-6030f9f848460.png', 'https://www.facebook.com/', 'https://twitter.com/', 'https://www.instagram.com/', 'https://play.google.com/store/apps', 'https://www.apple.com/in/itunes/', 'Copyright Restaurant Website © 2022.All Rights Reserved.', 'Single restaurant food ordering Website', 'Restaurant Website', '01862444646', 'zerjiss36@gmail.com', 'DHAKA,Bangladesh', '2022-08-13 17:34:21', '2022-08-13 11:34:21');
 
 -- --------------------------------------------------------
 
@@ -588,6 +588,13 @@ CREATE TABLE `slider` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `slider`
+--
+
+INSERT INTO `slider` (`id`, `title`, `description`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'FOOD', 'ABC', 'slider-62f7e016bd164.jpg', '2022-08-13 11:32:06', '2022-08-13 11:32:06');
+
 -- --------------------------------------------------------
 
 --
@@ -702,7 +709,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `mobile`, `profile_image`, `password`, `login_type`, `google_id`, `facebook_id`, `type`, `tax`, `delivery_charge`, `currency`, `max_order_qty`, `min_order_amount`, `max_order_amount`, `lat`, `lang`, `map`, `firebase`, `timezone`, `token`, `referral_amount`, `wallet`, `referral_code`, `is_available`, `otp`, `is_verified`, `purchase_key`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'admin@gmail.com', '', 'unknown.png', '$2y$10$RKFRI21R2SVyf/QMSj92H.srHuJXPWKk7VCbK8R3LJvRHuUobvjai', 'email', NULL, NULL, 1, '5', '10', '$', 10, 10, 1000, '40.7128', '-74.0060', 'Map Key', 'Firebase Key', 'Asia/Kolkata', '', '20', NULL, NULL, 1, NULL, NULL, NULL, '2020-06-05 07:21:20', '2021-02-21 01:20:49');
+(1, 'Admin', 'admin@gmail.com', '', 'unknown.png', '$2y$10$RKFRI21R2SVyf/QMSj92H.srHuJXPWKk7VCbK8R3LJvRHuUobvjai', 'email', NULL, NULL, 1, '5', '10', '$', 10, 10, 1000, '40.7128', '-74.0060', 'Map Key', 'Firebase Key', 'Asia/Kolkata', '', '20', NULL, NULL, 1, NULL, NULL, 'abc', '2020-06-05 07:21:20', '2021-02-21 01:20:49');
 
 --
 -- Indexes for dumped tables
@@ -1010,7 +1017,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `terms`
